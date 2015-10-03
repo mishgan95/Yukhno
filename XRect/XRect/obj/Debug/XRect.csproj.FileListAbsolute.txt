@@ -1,0 +1,39 @@
+C:\Users\роть\Documents\Visual Studio 2012\Projects\XRect\XRect\bin\Debug\XRect.exe.config
+C:\Users\роть\Documents\Visual Studio 2012\Projects\XRect\XRect\bin\Debug\XRect.exe
+C:\Users\роть\Documents\Visual Studio 2012\Projects\XRect\XRect\bin\Debug\XRect.pdb
+C:\Users\роть\Documents\Visual Studio 2012\Projects\XRect\XRect\obj\Debug\XRect.csprojResolveAssemblyReference.cache
+C:\Users\роть\Documents\Visual Studio 2012\Projects\XRect\XRect\obj\Debug\MainWindow.baml
+C:\Users\роть\Documents\Visual Studio 2012\Projects\XRect\XRect\obj\Debug\MainWindow.g.cs
+C:\Users\роть\Documents\Visual Studio 2012\Projects\XRect\XRect\obj\Debug\App.g.cs
+C:\Users\роть\Documents\Visual Studio 2012\Projects\XRect\XRect\obj\Debug\XRect_MarkupCompile.cache
+C:\Users\роть\Documents\Visual Studio 2012\Projects\XRect\XRect\obj\Debug\XRect.g.resources
+C:\Users\роть\Documents\Visual Studio 2012\Projects\XRect\XRect\obj\Debug\XRect.Properties.Resources.resources
+C:\Users\роть\Documents\Visual Studio 2012\Projects\XRect\XRect\obj\Debug\XRect.csproj.GenerateResource.Cache
+C:\Users\роть\Documents\Visual Studio 2012\Projects\XRect\XRect\obj\Debug\XRect.exe
+C:\Users\роть\Documents\Visual Studio 2012\Projects\XRect\XRect\obj\Debug\XRect.pdb
+D:\Misha\Desktop\XRect\XRect\XRect\bin\Debug\XRect.exe.config
+D:\Misha\Desktop\XRect\XRect\XRect\obj\Debug\XRect.exe
+D:\Misha\Desktop\XRect\XRect\XRect\obj\Debug\XRect.pdb
+D:\Misha\Desktop\XRect\XRect\XRect\bin\Debug\XRect.exe
+D:\Misha\Desktop\XRect\XRect\XRect\bin\Debug\XRect.pdb
+D:\Misha\Desktop\XRect\XRect\XRect\obj\Debug\XRect.csprojResolveAssemblyReference.cache
+D:\Misha\Desktop\XRect\XRect\XRect\obj\Debug\MainWindow.baml
+D:\Misha\Desktop\XRect\XRect\XRect\obj\Debug\MainWindow.g.cs
+D:\Misha\Desktop\XRect\XRect\XRect\obj\Debug\App.g.cs
+D:\Misha\Desktop\XRect\XRect\XRect\obj\Debug\XRect_MarkupCompile.cache
+D:\Misha\Desktop\XRect\XRect\XRect\obj\Debug\XRect.g.resources
+D:\Misha\Desktop\XRect\XRect\XRect\obj\Debug\XRect.Properties.Resources.resources
+D:\Misha\Desktop\XRect\XRect\XRect\obj\Debug\XRect.csproj.GenerateResource.Cache
+D:\учеба\3 курс 1 семестр\Разработка программных приложений (Юхно Иван Сергеевич)\1 лаба\XRect\XRect\XRect\bin\Debug\XRect.exe.config
+D:\учеба\3 курс 1 семестр\Разработка программных приложений (Юхно Иван Сергеевич)\1 лаба\XRect\XRect\XRect\obj\Debug\XRect.exe
+D:\учеба\3 курс 1 семестр\Разработка программных приложений (Юхно Иван Сергеевич)\1 лаба\XRect\XRect\XRect\obj\Debug\XRect.pdb
+D:\учеба\3 курс 1 семестр\Разработка программных приложений (Юхно Иван Сергеевич)\1 лаба\XRect\XRect\XRect\bin\Debug\XRect.exe
+D:\учеба\3 курс 1 семестр\Разработка программных приложений (Юхно Иван Сергеевич)\1 лаба\XRect\XRect\XRect\bin\Debug\XRect.pdb
+D:\учеба\3 курс 1 семестр\Разработка программных приложений (Юхно Иван Сергеевич)\1 лаба\XRect\XRect\XRect\obj\Debug\XRect.csprojResolveAssemblyReference.cache
+D:\учеба\3 курс 1 семестр\Разработка программных приложений (Юхно Иван Сергеевич)\1 лаба\XRect\XRect\XRect\obj\Debug\MainWindow.baml
+D:\учеба\3 курс 1 семестр\Разработка программных приложений (Юхно Иван Сергеевич)\1 лаба\XRect\XRect\XRect\obj\Debug\MainWindow.g.cs
+D:\учеба\3 курс 1 семестр\Разработка программных приложений (Юхно Иван Сергеевич)\1 лаба\XRect\XRect\XRect\obj\Debug\App.g.cs
+D:\учеба\3 курс 1 семестр\Разработка программных приложений (Юхно Иван Сергеевич)\1 лаба\XRect\XRect\XRect\obj\Debug\XRect_MarkupCompile.cache
+D:\учеба\3 курс 1 семестр\Разработка программных приложений (Юхно Иван Сергеевич)\1 лаба\XRect\XRect\XRect\obj\Debug\XRect.g.resources
+D:\учеба\3 курс 1 семестр\Разработка программных приложений (Юхно Иван Сергеевич)\1 лаба\XRect\XRect\XRect\obj\Debug\XRect.Properties.Resources.resources
+D:\учеба\3 курс 1 семестр\Разработка программных приложений (Юхно Иван Сергеевич)\1 лаба\XRect\XRect\XRect\obj\Debug\XRect.csproj.GenerateResource.Cache
