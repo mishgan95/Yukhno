@@ -22,7 +22,9 @@ namespace XRect
     {
         RectBox rect;   
         Point pDrawStart; 
-        bool isDraw = true; 
+        bool isDraw = true;
+
+        string typeRect="Зеленый";
 
         public MainWindow()
         {
@@ -34,14 +36,17 @@ namespace XRect
             if (isDraw)
             {
                 pDrawStart = e.GetPosition(this.cnvsMain); 
-                if (rbGreen.IsChecked == true) 
+
+                switch(typeRect)
                 {
-                    rect = new RectBoxGreen();
+                    case "Зеленый":
+                        rect = new RectBoxGreen();
+                        break;
+                    case "Красный":
+                        rect = new RectBoxRed();
+                        break;
                 }
-                else
-                {
-                    rect = new RectBoxRed();
-                }
+
                 this.cnvsMain.Children.Add(rect.XRectangle); 
             }
         }
@@ -82,5 +87,12 @@ namespace XRect
             isDraw = true;  
             RectBox.isMove = false;  
         }
+
+        private void rbRed_Checked_1(object sender, RoutedEventArgs e)
+        {
+            typeRect = ((RadioButton)sender).Content.ToString();
+        }
+        
+
     }
 }

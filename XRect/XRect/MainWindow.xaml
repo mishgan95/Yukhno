@@ -15,8 +15,8 @@
         </Grid.ColumnDefinitions>
         <Button Name="btnDraw" Content="Рисовать" Grid.Column="0" Grid.Row="0" Click="btnDraw_Click_1"></Button>
         <Button Name="btnMove" Content="Двигать" Grid.Column="2" Grid.Row="0" Click="btnMove_Click_1"></Button>
-        <RadioButton Grid.Column="1" Grid.Row="0" Content="Зеленый" Name="rbGreen" IsChecked="True"></RadioButton>
-        <RadioButton Grid.Column="1" Grid.Row="0" Content="Красный" Name="rbRed" Margin="0,22,0,228" Grid.RowSpan="2"/>
+        <RadioButton Grid.Column="1" Grid.Row="0"  Checked="rbRed_Checked_1" Content="Зеленый" Name="rbGreen" IsChecked="True"></RadioButton>
+        <RadioButton Grid.Column="1" Grid.Row="0" Checked="rbRed_Checked_1" Content="Красный" Name="rbRed" Margin="0,22,0,228" Grid.RowSpan="2"/>
         <Canvas Name="cnvsMain" Background="#FFF3E8E8"  Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" MouseDown="cnvsMain_MouseDown_1" MouseMove="cnvsMain_MouseMove_1" MouseUp="cnvsMain_MouseUp_1">
             
         </Canvas>        

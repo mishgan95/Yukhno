@@ -20,6 +20,8 @@ namespace XRect
         protected Rectangle _XRectangle; 
         protected static bool _isMove;
         protected bool _isMoveThis;
+        protected double mouseDownX;
+        protected double mouseDownY;
 
         public Rectangle XRectangle 
         {
@@ -48,6 +50,8 @@ namespace XRect
             {
                 _isMoveThis = true; 
                 _XRectangle.CaptureMouse();
+                mouseDownX = e.GetPosition(_XRectangle).X;
+                mouseDownY = e.GetPosition(_XRectangle).Y;
             }
         }
 
@@ -64,8 +68,8 @@ namespace XRect
         {
             if (_isMove && _isMoveThis)
             {
-                _XRectangle.SetValue(Canvas.LeftProperty, e.GetPosition((Canvas)_XRectangle.Parent).X);
-                _XRectangle.SetValue(Canvas.TopProperty, e.GetPosition((Canvas)_XRectangle.Parent).Y);
+                _XRectangle.SetValue(Canvas.LeftProperty, e.GetPosition((Canvas)_XRectangle.Parent).X - mouseDownX);
+                _XRectangle.SetValue(Canvas.TopProperty, e.GetPosition((Canvas)_XRectangle.Parent).Y - mouseDownY);
             }
 
         }
