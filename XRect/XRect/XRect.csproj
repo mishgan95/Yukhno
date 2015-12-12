@@ -53,6 +53,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="LineBox.cs" />
+    <Compile Include="LineBoxBlack.cs" />
+    <Compile Include="LineBoxBlue.cs" />
+    <Compile Include="LineBoxYellow.cs" />
     <Compile Include="RectBox.cs" />
     <Compile Include="RectBoxGreen.cs" />
     <Compile Include="RectBoxRed.cs" />

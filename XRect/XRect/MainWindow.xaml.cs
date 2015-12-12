@@ -20,15 +20,17 @@ namespace XRect
     /// </summary>
     public partial class MainWindow : Window
     {
-        RectBox rect;   
+        RectBox rect;
+        LineBox line;
         Point pDrawStart; 
-        bool isDraw = true;
+        bool isDraw = false;
 
-        string typeRect="Зеленый";
-
+        string typeRect = "Зеленый";
+        string typeLine = "Черная";
         public MainWindow()
         {
             InitializeComponent();
+            LineBox.isDraw = false;
         }
 
         private void cnvsMain_MouseDown_1(object sender, MouseButtonEventArgs e)
@@ -46,8 +48,9 @@ namespace XRect
                         rect = new RectBoxRed();
                         break;
                 }
-
-                this.cnvsMain.Children.Add(rect.XRectangle); 
+                this.cnvsMain.Children.Add(rect.XRectangle);
+                rect.XRectangle.MouseDown += Rectangle_MouseDown_MainWindow;
+                rect.XRectangle.MouseUp += Rectangle_MouseUp_MainWindow;
             }
         }
 
@@ -80,19 +83,67 @@ namespace XRect
         {
             isDraw = false;  
             RectBox.isMove = true;
+            LineBox.isDraw = false;
         }
 
         private void btnDraw_Click_1(object sender, RoutedEventArgs e)
         {
             isDraw = true;  
-            RectBox.isMove = false;  
+            RectBox.isMove = false;
+            LineBox.isDraw = false;
         }
 
-        private void rbRed_Checked_1(object sender, RoutedEventArgs e)
+        private void Rectangle_MouseDown_MainWindow(object sender, MouseEventArgs e)
+        {
+            if (LineBox.isDraw == true)
+            {
+                switch (typeLine)
+                {
+                    case "Черная":
+                        line = new LineBoxBlack();
+                        break;
+                    case "Синяя":
+                        line = new LineBoxBlue();
+                        break;
+                    case "Желтая":
+                        line = new LineBoxYellow();
+                        break;
+                }
+                line.Rect1 = (Rectangle)sender;
+                line.Rect1_Move(sender, e);
+                cnvsMain.MouseMove += line.Rect1_Move;
+            }
+        }
+
+        private void Rectangle_MouseUp_MainWindow(object sender, MouseEventArgs e)
+        {
+            if (LineBox.isDraw == true)
+            {
+                line.Rect2 = (Rectangle)sender;
+                if (line.Rect1 != null)
+                {
+                    line.Rect2_Move(sender, e);
+                    cnvsMain.MouseMove += line.Rect2_Move;
+                    cnvsMain.Children.Add(line.mainLine);
+                }
+            }
+        }
+
+        private void btnDrawLine_Click_1(object sender, RoutedEventArgs e)
+        {
+            isDraw = false;
+            RectBox.isMove = false;
+            LineBox.isDraw = true;
+        }
+
+        private void rbGreen_Checked_1(object sender, RoutedEventArgs e)
         {
             typeRect = ((RadioButton)sender).Content.ToString();
         }
-        
 
+        private void rbLineBlack_Checked_1(object sender, RoutedEventArgs e)
+        {
+            typeLine = ((RadioButton)sender).Content.ToString();
+        }
     }
 }

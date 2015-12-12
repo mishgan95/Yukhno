@@ -15,14 +15,14 @@ using System.Windows.Shapes;
 
 namespace XRect
 {
-    class RectBoxGreen : RectBox 
+    class RectBoxGreen : RectBox
     {
         public RectBoxGreen()
             : base() 
         {
             _XRectangle.StrokeThickness = 2;
-            _XRectangle.Fill = Brushes.Green; 
-            _XRectangle.Stroke = Brushes.Black; 
+            _XRectangle.Fill = Brushes.Green;
+            _XRectangle.Stroke = Brushes.Black;
         }
     }
 }
