@@ -12,7 +12,7 @@ namespace XRect
         public LineBoxBlack()
             : base()
         {
-            _mainLine.Stroke = Brushes.Black;
+            lineMain.Stroke = Brushes.Black;
         }
     }
 }

@@ -10,9 +10,9 @@ namespace XRect
     class LineBoxYellow : LineBox
     {
         public LineBoxYellow()
-            :base()
+            : base()
         {
-            _mainLine.Stroke = Brushes.Yellow;
+            lineMain.Stroke = Brushes.Yellow;
         }
     }
 }

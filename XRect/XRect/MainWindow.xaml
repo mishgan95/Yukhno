@@ -20,11 +20,11 @@
         <Button Name="btnDrawLine" Content="Рисовать линию" Grid.Column="1" Grid.Row="0" Click="btnDrawLine_Click_1"></Button>
         <Button Name="btnMove" Content="Двигать" Grid.Column="2" Grid.Row="0" Click="btnMove_Click_1"></Button>
         <RadioButton Grid.Column="0" Grid.Row="1" Checked="rbGreen_Checked_1" Content="Зеленый" Name="rbGreen" IsChecked="True" GroupName="1"></RadioButton>
-        <RadioButton Grid.Column="0" Grid.Row="1" Checked="rbGreen_Checked_1" Content="Красный" Name="rbRed" GroupName="1" Margin="0,22,0,228" Grid.RowSpan="2"/>
+        <RadioButton Grid.Column="0" Grid.Row="1" Checked="rbRed_Checked_1" Content="Красный" Name="rbRed" GroupName="1" Margin="0,22,0,228" Grid.RowSpan="2"/>
 
         <RadioButton Grid.Column="1" Grid.Row="1" Content="Черная" Checked="rbLineBlack_Checked_1" Name="rbLineBlack" IsChecked="True" GroupName="2"></RadioButton>
-        <RadioButton Grid.Column="1" Grid.Row="1" Content="Синяя" Checked="rbLineBlack_Checked_1" Name="rbLineBlue" Margin="0,22,0,228" GroupName="2" Grid.RowSpan="2" />
-        <RadioButton Grid.Column="1" Grid.Row="1" Content="Желтая" Checked="rbLineBlack_Checked_1" Name="rbLineYellow" Margin="0,47,0,203" GroupName="2" Grid.RowSpan="2" />
+        <RadioButton Grid.Column="1" Grid.Row="1" Content="Синяя" Checked="rbLineBlue_Checked_1" Name="rbLineBlue" Margin="0,22,0,228" GroupName="2" Grid.RowSpan="2" />
+        <RadioButton Grid.Column="1" Grid.Row="1" Content="Желтая" Checked="rbLineYellow_Checked_1" Name="rbLineYellow" Margin="0,47,0,203" GroupName="2" Grid.RowSpan="2" />
         <Canvas Name="cnvsMain" Background="#FFF3E8E8"  Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" MouseDown="cnvsMain_MouseDown_1" MouseMove="cnvsMain_MouseMove_1" MouseUp="cnvsMain_MouseUp_1">
 
         </Canvas>

@@ -11,45 +11,26 @@ namespace XRect
 {
     class LineBox
     {
-        protected Rectangle _Rect1;
-        protected Rectangle _Rect2;
-        protected Line _mainLine;
-
-        public static bool isDraw { get; set; }
-
-        public Rectangle Rect1
-        {
-            get { return _Rect1; }
-            set { _Rect1 = value; }
-        }
-
-        public Rectangle Rect2
-        {
-            get { return _Rect2; }
-            set { _Rect2 = value; }
-        }
-
-        public Line mainLine
-        {
-            get { return _mainLine; }
-            set { _mainLine = value; }
-        }
+        public static bool isDraw;
+        public Rectangle rect1 { get; set; }
+        public Rectangle rect2 { get; set; }
+        public Line lineMain { get; set; }
 
         public LineBox()
         {
-            _mainLine = new Line();
-            _mainLine.StrokeThickness = 2;
+            lineMain = new Line();
+            lineMain.StrokeThickness = 2;
         }
 
         public void Rect2_Move(Object sender, MouseEventArgs e)
         {
-            _mainLine.X2 = Canvas.GetLeft(Rect2) + Rect2.Width/2;
-            _mainLine.Y2 = Canvas.GetTop(Rect2) + Rect2.Height/2;
+            lineMain.X2 = Canvas.GetLeft(rect2) + rect2.Width/2;
+            lineMain.Y2 = Canvas.GetTop(rect2) + rect2.Height/2;
         }
         public void Rect1_Move(Object sender, MouseEventArgs e)
         {
-            _mainLine.X1 = Canvas.GetLeft(Rect1) + Rect1.Width / 2;
-            _mainLine.Y1 = Canvas.GetTop(Rect1) + Rect1.Height / 2;
+            lineMain.X1 = Canvas.GetLeft(rect1) + rect1.Width / 2;
+            lineMain.Y1 = Canvas.GetTop(rect1) + rect1.Height / 2;
         }
     }
 }

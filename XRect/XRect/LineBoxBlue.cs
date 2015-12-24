@@ -10,9 +10,9 @@ namespace XRect
     class LineBoxBlue : LineBox
     {
         public LineBoxBlue()
-            :base()
+            : base()
         {
-            _mainLine.Stroke = Brushes.Blue;
+            lineMain.Stroke = Brushes.Blue;
         }
     }
 }

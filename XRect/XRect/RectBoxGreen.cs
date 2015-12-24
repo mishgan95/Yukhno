@@ -18,11 +18,11 @@ namespace XRect
     class RectBoxGreen : RectBox
     {
         public RectBoxGreen()
-            : base() 
+            : base()
         {
-            _XRectangle.StrokeThickness = 2;
-            _XRectangle.Fill = Brushes.Green;
-            _XRectangle.Stroke = Brushes.Black;
+            _rect.StrokeThickness = 2;
+            _rect.Fill = Brushes.Green;
+            _rect.Stroke = Brushes.Black;
         }
     }
 }

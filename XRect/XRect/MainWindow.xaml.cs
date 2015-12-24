@@ -18,6 +18,9 @@ namespace XRect
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
+    enum ColorLine{ Black, Blue, Yellow };
+    enum ColorRect{ Green, Red };
+
     public partial class MainWindow : Window
     {
         RectBox rect;
@@ -25,8 +28,9 @@ namespace XRect
         Point pDrawStart; 
         bool isDraw = false;
 
-        string typeRect = "Зеленый";
-        string typeLine = "Черная";
+        ColorLine colorL = ColorLine.Black;
+        ColorRect colorR = ColorRect.Green;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -39,18 +43,18 @@ namespace XRect
             {
                 pDrawStart = e.GetPosition(this.cnvsMain); 
 
-                switch(typeRect)
+                switch(colorR)
                 {
-                    case "Зеленый":
+                    case ColorRect.Green:
                         rect = new RectBoxGreen();
                         break;
-                    case "Красный":
+                    case ColorRect.Red:
                         rect = new RectBoxRed();
                         break;
                 }
-                this.cnvsMain.Children.Add(rect.XRectangle);
-                rect.XRectangle.MouseDown += Rectangle_MouseDown_MainWindow;
-                rect.XRectangle.MouseUp += Rectangle_MouseUp_MainWindow;
+                this.cnvsMain.Children.Add(rect.rect);
+                rect.rect.MouseDown += Rectangle_MouseDown_MainWindow;
+                rect.rect.MouseUp += Rectangle_MouseUp_MainWindow;
             }
         }
 
@@ -66,11 +70,11 @@ namespace XRect
                 double width = Math.Max(pos.X, pDrawStart.X) - x;
                 double height = Math.Max(pos.Y, pDrawStart.Y) - y;
 
-                rect.XRectangle.Width = width; 
-                rect.XRectangle.Height = height;
+                rect.rect.Width = width; 
+                rect.rect.Height = height;
 
-                Canvas.SetLeft(rect.XRectangle, x);
-                Canvas.SetTop(rect.XRectangle, y);
+                Canvas.SetLeft(rect.rect, x);
+                Canvas.SetTop(rect.rect, y);
             }
         }
 
@@ -97,19 +101,19 @@ namespace XRect
         {
             if (LineBox.isDraw == true)
             {
-                switch (typeLine)
+                switch (colorL)
                 {
-                    case "Черная":
+                    case ColorLine.Black:
                         line = new LineBoxBlack();
                         break;
-                    case "Синяя":
+                    case ColorLine.Blue:
                         line = new LineBoxBlue();
                         break;
-                    case "Желтая":
+                    case ColorLine.Yellow:
                         line = new LineBoxYellow();
                         break;
                 }
-                line.Rect1 = (Rectangle)sender;
+                line.rect1 = (Rectangle)sender;
                 line.Rect1_Move(sender, e);
                 cnvsMain.MouseMove += line.Rect1_Move;
             }
@@ -119,12 +123,12 @@ namespace XRect
         {
             if (LineBox.isDraw == true)
             {
-                line.Rect2 = (Rectangle)sender;
-                if (line.Rect1 != null)
+                line.rect2 = (Rectangle)sender;
+                if (line.rect1 != null)
                 {
                     line.Rect2_Move(sender, e);
                     cnvsMain.MouseMove += line.Rect2_Move;
-                    cnvsMain.Children.Add(line.mainLine);
+                    cnvsMain.Children.Add(line.lineMain);
                 }
             }
         }
@@ -138,12 +142,27 @@ namespace XRect
 
         private void rbGreen_Checked_1(object sender, RoutedEventArgs e)
         {
-            typeRect = ((RadioButton)sender).Content.ToString();
+            colorR = ColorRect.Green;
         }
 
         private void rbLineBlack_Checked_1(object sender, RoutedEventArgs e)
         {
-            typeLine = ((RadioButton)sender).Content.ToString();
+            colorL = ColorLine.Black;
+        }
+
+        private void rbRed_Checked_1(object sender, RoutedEventArgs e)
+        {
+            colorR = ColorRect.Red;
+        }
+
+        private void rbLineBlue_Checked_1(object sender, RoutedEventArgs e)
+        {
+            colorL = ColorLine.Blue;
+        }
+
+        private void rbLineYellow_Checked_1(object sender, RoutedEventArgs e)
+        {
+            colorL = ColorLine.Yellow;
         }
     }
 }
