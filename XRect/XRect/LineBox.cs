@@ -32,5 +32,17 @@ namespace XRect
             lineMain.X1 = Canvas.GetLeft(rect1) + rect1.Width / 2;
             lineMain.Y1 = Canvas.GetTop(rect1) + rect1.Height / 2;
         }
+
+
+        public void Rect2_Move()
+        {
+            lineMain.X2 = Canvas.GetLeft(rect2) + rect2.Width / 2;
+            lineMain.Y2 = Canvas.GetTop(rect2) + rect2.Height / 2;
+        }
+        public void Rect1_Move()
+        {
+            lineMain.X1 = Canvas.GetLeft(rect1) + rect1.Width / 2;
+            lineMain.Y1 = Canvas.GetTop(rect1) + rect1.Height / 2;
+        }
     }
 }

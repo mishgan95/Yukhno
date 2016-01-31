@@ -20,10 +20,10 @@ namespace XRect
         public RectBoxRed()
             : base()
         {
-            _rect.StrokeThickness = 2;
-            _rect.Fill = Brushes.Red;
-            _rect.Stroke = Brushes.Black;
-            _rect.StrokeDashArray = new DoubleCollection() { 3 }; 
+            rect.StrokeThickness = 1;
+            rect.Fill = Brushes.DarkRed;
+            rect.Stroke = Brushes.Black;
+            rect.StrokeDashArray = new DoubleCollection() { 3 }; 
         }
     }
 }

@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -53,6 +54,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ImgLine.cs" />
+    <Compile Include="ImgRec.cs" />
     <Compile Include="LineBox.cs" />
     <Compile Include="LineBoxBlack.cs" />
     <Compile Include="LineBoxBlue.cs" />

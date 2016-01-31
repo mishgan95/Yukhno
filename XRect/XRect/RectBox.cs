@@ -17,23 +17,24 @@ namespace XRect
 {
     class RectBox
     {
+
         public static bool isMove;
 
         public Rectangle rect
         {
             get { return _rect; }
-        }
+        }       
 
-        protected Rectangle _rect; 
+        protected Rectangle _rect;         
         protected bool _isMoveThis;
-        protected double mouseDownX;
-        protected double mouseDownY;
+        protected double _mouseDownX;
+        protected double _mouseDownY;
 
-        public RectBox()  
+        public RectBox()
         {
             _isMoveThis = false;
             _rect = new Rectangle();
-            _rect.MouseDown += Rectangle_MouseDown; 
+            _rect.MouseDown += Rectangle_MouseDown;
             _rect.MouseUp += Rectangle_MouseUp;
             _rect.MouseMove += Rectangle_MouseMove;
 
@@ -45,8 +46,8 @@ namespace XRect
             {
                 _isMoveThis = true; 
                 _rect.CaptureMouse();
-                mouseDownX = e.GetPosition(_rect).X;
-                mouseDownY = e.GetPosition(_rect).Y;
+                _mouseDownX = e.GetPosition(_rect).X;
+                _mouseDownY = e.GetPosition(_rect).Y;
             }
         }
 
@@ -63,8 +64,8 @@ namespace XRect
         {
             if (isMove && _isMoveThis)
             {
-                _rect.SetValue(Canvas.LeftProperty, e.GetPosition((Canvas)_rect.Parent).X - mouseDownX);
-                _rect.SetValue(Canvas.TopProperty, e.GetPosition((Canvas)_rect.Parent).Y - mouseDownY);
+                _rect.SetValue(Canvas.LeftProperty, e.GetPosition((Canvas)_rect.Parent).X - _mouseDownX);
+                _rect.SetValue(Canvas.TopProperty, e.GetPosition((Canvas)_rect.Parent).Y - _mouseDownY);
             }
 
         }
