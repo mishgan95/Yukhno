@@ -63,6 +63,7 @@
     <Compile Include="RectBox.cs" />
     <Compile Include="RectBoxGreen.cs" />
     <Compile Include="RectBoxRed.cs" />
+    <Compile Include="SaveLoadImg.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
